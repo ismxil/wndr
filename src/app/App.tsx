@@ -10,7 +10,7 @@ export default function App() {
   return (
     <div className="font-sans text-black w-full min-h-screen flex flex-col selection:bg-[#e6017f] selection:text-white">
       {/* Hero Section */}
-      <section className="bg-[#fbe00d] relative w-full flex flex-col pt-6 px-6 pb-16 md:px-12 md:pt-8 md:pb-24">
+      <section className="bg-[#fbe00d] relative w-full min-h-[100dvh] flex flex-col pt-6 px-6 pb-16 md:px-12 md:pt-8 md:pb-24">
         {/* Nav */}
         <nav className="flex items-center justify-between w-full">
           <div className="md:w-1/2 flex items-center">
@@ -27,13 +27,13 @@ export default function App() {
               <a href="#" className="text-black/50 hover:opacity-70 transition-opacity">Podcasts</a>
             </div>
             
-            <button className="hidden md:flex items-center justify-center bg-[#e6017f] text-white px-8 py-3 rounded-[17262px] font-semibold text-[24px] tracking-[-0.15px] hover:bg-pink-700 transition-colors shadow-sm">
+            <a href="https://luma.com/wndr" target="_blank" rel="noopener noreferrer" className="hidden md:flex items-center justify-center bg-[#e6017f] text-white px-8 py-3 rounded-[17262px] font-semibold text-[24px] tracking-[-0.15px] hover:bg-pink-700 transition-colors shadow-sm">
               Join us
-            </button>
+            </a>
             
             {/* Mobile Nav Toggle */}
             <button 
-              className="md:hidden text-[#e6017f] z-20"
+              className="md:hidden text-[#e6017f] z-50 relative"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="Toggle menu"
             >
@@ -44,13 +44,13 @@ export default function App() {
 
         {/* Mobile Nav Menu */}
         {mobileMenuOpen && (
-          <div className="absolute inset-0 bg-[#fbe00d] z-10 flex flex-col items-center justify-center space-y-8 text-2xl font-medium pt-20">
-            <a href="#" className="hover:opacity-70">Stories</a>
-            <a href="#" className="hover:opacity-70">Shop</a>
-            <a href="#" className="hover:opacity-70">About</a>
+          <div className="fixed inset-0 bg-[#fbe00d] z-40 flex flex-col items-start justify-center space-y-8 text-4xl font-medium px-8 h-[100dvh] w-full overflow-hidden">
+            <a href="#" className="hover:opacity-70 text-black">Stories</a>
+            <a href="#" className="hover:opacity-70 text-black">Shop</a>
+            <a href="#" className="hover:opacity-70 text-black">About</a>
             <a href="#" className="text-black/50 hover:opacity-70">Symposium</a>
             <a href="#" className="text-black/50 hover:opacity-70">Podcasts</a>
-            <button className="bg-[#e6017f] text-white px-8 py-3 rounded-full font-semibold">Join us</button>
+            <a href="https://luma.com/wndr" target="_blank" rel="noopener noreferrer" className="bg-[#e6017f] text-white px-8 py-5 rounded-full font-semibold flex items-center justify-center w-full text-center text-2xl mt-8">Join us</a>
           </div>
         )}
 
@@ -68,9 +68,9 @@ export default function App() {
               <p>In April 30, wndr—ground™ returned to Chicago for our third live symposium: Designing for Dignity.</p>
               <p>03: A Convening of Possibilities.</p>
             </div>
-            <button className="border border-black text-black px-8 py-[17px] mt-4 rounded-[17262px] font-medium text-[23.1px] leading-[20.56px] w-fit hover:bg-black hover:text-[#fbe00d] transition-colors">
+            <a href="https://luma.com/wndr" target="_blank" rel="noopener noreferrer" className="border border-black text-black px-8 py-[17px] mt-4 rounded-full font-medium text-[23.1px] leading-[20.56px] w-full md:w-fit hover:bg-black hover:text-[#fbe00d] transition-colors block text-center">
               Sign up
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -93,12 +93,12 @@ export default function App() {
               In Fourth edition, Climate Realities and Responses, we reflect on the biggest design challenge of all: the climate crisis and its compounding reverberations.
             </p>
             
-            <button className="border border-black text-black px-6 py-[17px] rounded-[17262px] font-medium text-[23.1px] leading-[20.56px] w-fit hover:bg-black hover:text-[#fbe00d] transition-colors">
+            <a href="https://luma.com/wndr" target="_blank" rel="noopener noreferrer" className="border border-black text-black px-6 py-[17px] rounded-full font-medium text-[23.1px] leading-[20.56px] w-full md:w-fit hover:bg-black hover:text-[#fbe00d] transition-colors block text-center mt-4">
               Join the next one
-            </button>
+            </a>
           </div>
           
-          <div className="w-full lg:flex-1 h-[500px] md:h-[824.66px] bg-[#e6017f] relative overflow-hidden flex items-center justify-center">
+          <div className="w-full lg:flex-1 h-[400px] md:h-[824.66px] bg-[#e6017f] relative overflow-hidden flex items-center justify-center rounded-[32px] md:rounded-none">
             <img src={imgDsc01486Edited1} alt="Current Edition" className="absolute min-w-full min-h-full object-cover object-center scale-150" />
             <div className="absolute inset-x-0 px-6 md:px-12 flex justify-between pointer-events-none">
               <div className="w-8 h-8 rounded-full flex items-center justify-center -scale-x-100">
@@ -119,7 +119,7 @@ export default function App() {
       {/* Past Event 2 (Black Background) */}
       <section className="bg-black py-24 md:py-32 px-6 md:px-12 flex flex-col">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-16 items-start w-full">
-          <div className="w-full lg:flex-1 h-[500px] md:h-[824.66px] bg-[#e6017f] min-w-px"></div>
+          <div className="w-full lg:flex-1 h-[400px] md:h-[824.66px] bg-[#e6017f] min-w-px rounded-[32px] md:rounded-none"></div>
           
           <div className="w-full lg:flex-1 flex flex-col mt-4 text-[#fbe00d]">
             <h3 className="text-4xl md:text-[45.2px] leading-[55.64px] font-medium mb-12">Fourth Edition</h3>
@@ -131,9 +131,9 @@ export default function App() {
               In Fourth edition, Climate Realities and Responses, we reflect on the biggest design challenge of all: the climate crisis and its compounding reverberations.
             </p>
             
-            <button className="bg-[#e6017f] text-white px-8 py-[16px] rounded-[17262px] font-semibold text-[24px] leading-[30px] tracking-[-0.15px] w-fit hover:bg-pink-700 transition-colors shadow-md">
+            <a href="https://luma.com/wndr" target="_blank" rel="noopener noreferrer" className="bg-[#e6017f] text-white px-8 py-[16px] rounded-[17262px] font-semibold text-[24px] leading-[30px] tracking-[-0.15px] w-full md:w-fit hover:bg-pink-700 transition-colors shadow-md block text-center">
               Join us
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -145,9 +145,9 @@ export default function App() {
             <span className="font-sans font-bold tracking-[-0.8px] mr-4">wndr—ground™</span>
             is a global platform focused on design as social practice.
           </h2>
-          <button className="border border-black text-black px-8 py-[17px] rounded-[17262px] font-medium text-[23.1px] leading-[20.56px] hover:bg-black hover:text-[#fbe00d] transition-colors">
+          <a href="mailto:thewndrground@gmail.com" className="border border-black text-black px-8 py-[17px] rounded-full font-medium text-[23.1px] leading-[20.56px] hover:bg-black hover:text-[#fbe00d] transition-colors block w-full md:w-auto text-center mt-6">
             Volunteer your office
-          </button>
+          </a>
         </div>
       </section>
 
@@ -159,7 +159,7 @@ export default function App() {
         </div>
         
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-16 items-start w-full">
-          <div className="w-full lg:flex-1 h-[500px] md:h-[824.66px] bg-[#e6017f] min-w-px"></div>
+          <div className="w-full lg:flex-1 h-[400px] md:h-[824.66px] bg-[#e6017f] min-w-px rounded-[32px] md:rounded-none"></div>
           
           <div className="w-full lg:flex-1 flex flex-col mt-4 text-black">
             <h3 className="text-4xl md:text-[45.2px] leading-[55.64px] font-medium mb-12">Fourth Edition</h3>
@@ -171,9 +171,9 @@ export default function App() {
               In Fourth edition, Climate Realities and Responses, we reflect on the biggest design challenge of all: the climate crisis and its compounding reverberations.
             </p>
             
-            <button className="border border-black text-black px-8 py-[17px] rounded-[17262px] font-medium text-[23.1px] leading-[20.56px] w-fit hover:bg-black hover:text-[#fbe00d] transition-colors">
+            <a href="https://luma.com/wndr" target="_blank" rel="noopener noreferrer" className="border border-black text-black px-8 py-[17px] rounded-[17262px] font-medium text-[23.1px] leading-[20.56px] w-full md:w-fit hover:bg-black hover:text-[#fbe00d] transition-colors block text-center">
               Sign up
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -188,44 +188,44 @@ export default function App() {
           
           {/* Person 1 */}
           <div className="flex flex-col gap-3">
-            <div className="w-full h-[400px] md:h-[559px] bg-[#e6017f] relative overflow-hidden">
-              <img src={imgImage} alt="Ismail Ahmad" className="absolute w-[125%] h-full max-w-none object-cover -left-[12.5%]" />
+            <div className="w-full h-[350px] md:h-[559px] bg-[#e6017f] relative overflow-hidden rounded-[32px] md:rounded-none">
+              <img src="https://ui-avatars.com/api/?name=Ismail+Ahmad&background=e6017f&color=fff&size=512" alt="Ismail Ahmad" className="absolute w-[125%] h-full max-w-none object-cover -left-[12.5%]" />
             </div>
             <div className="mt-1">
               <h4 className="text-[26.3px] leading-[33.18px] font-medium text-black tracking-[0.03px]">Ismail Ahmad</h4>
               <p className="text-[25.1px] leading-[31.1px] font-serif italic text-black tracking-[0.03px]">Co-founder</p>
             </div>
-            <button className="mt-4 bg-[#e6017f] text-white px-6 py-[16px] rounded-[17262px] font-semibold text-[24px] leading-[30px] w-fit shadow-md hover:bg-pink-700 transition-colors">
+            <a href="https://www.linkedin.com/in/ismxil/" target="_blank" rel="noopener noreferrer" className="mt-4 bg-[#e6017f] text-white px-6 py-[16px] rounded-full font-semibold text-[24px] leading-[30px] w-full md:w-fit shadow-md hover:bg-pink-700 transition-colors block text-center">
               LinkedIn
-            </button>
+            </a>
           </div>
 
           {/* Person 2 */}
           <div className="flex flex-col gap-3">
-            <div className="w-full h-[400px] md:h-[559px] bg-[#e6017f] relative overflow-hidden">
-              <img src={imgImage} alt="Ayomiposi Aluko" className="absolute w-[125%] h-full max-w-none object-cover -left-[12.4%]" />
+            <div className="w-full h-[350px] md:h-[559px] bg-[#e6017f] relative overflow-hidden rounded-[32px] md:rounded-none">
+              <img src="https://ui-avatars.com/api/?name=Ayo+Aluko&background=e6017f&color=fff&size=512" alt="Ayo Aluko" className="absolute w-[125%] h-full max-w-none object-cover -left-[12.4%]" />
             </div>
             <div className="mt-1">
-              <h4 className="text-[27.3px] leading-[33.18px] font-medium text-black tracking-[0.03px]">Ayomiposi Aluko</h4>
+              <h4 className="text-[27.3px] leading-[33.18px] font-medium text-black tracking-[0.03px]">Ayo Aluko</h4>
               <p className="text-[25.1px] leading-[31.1px] font-serif italic text-black tracking-[0.03px]">Co-founder</p>
             </div>
-            <button className="mt-4 bg-[#e6017f] text-white px-6 py-[16px] rounded-[17262px] font-semibold text-[24px] leading-[30px] w-fit shadow-md hover:bg-pink-700 transition-colors">
+            <a href="https://www.linkedin.com/in/aluko-brown/" target="_blank" rel="noopener noreferrer" className="mt-4 bg-[#e6017f] text-white px-6 py-[16px] rounded-full font-semibold text-[24px] leading-[30px] w-full md:w-fit shadow-md hover:bg-pink-700 transition-colors block text-center">
               LinkedIn
-            </button>
+            </a>
           </div>
 
           {/* Person 3 */}
           <div className="flex flex-col gap-3">
-            <div className="w-full h-[400px] md:h-[559px] bg-[#e6017f] relative overflow-hidden">
-              <img src={imgImage} alt="Cindy Lüke" className="absolute w-full h-full object-cover left-0" />
+            <div className="w-full h-[350px] md:h-[559px] bg-[#e6017f] relative overflow-hidden rounded-[32px] md:rounded-none">
+              <img src="https://ui-avatars.com/api/?name=Cindy+Lüke&background=e6017f&color=fff&size=512" alt="Cindy Lüke" className="absolute w-full h-full object-cover left-0" />
             </div>
             <div className="mt-1">
               <h4 className="text-[26.7px] leading-[33.18px] font-medium text-black tracking-[0.03px]">Cindy Lüke</h4>
               <p className="text-[25.1px] leading-[31.1px] font-serif italic text-black tracking-[0.03px]">Partner</p>
             </div>
-            <button className="mt-4 bg-[#e6017f] text-white px-6 py-[16px] rounded-[17262px] font-semibold text-[24px] leading-[30px] w-fit shadow-md hover:bg-pink-700 transition-colors">
+            <a href="https://www.linkedin.com/in/cindy-lueke/" target="_blank" rel="noopener noreferrer" className="mt-4 bg-[#e6017f] text-white px-6 py-[16px] rounded-full font-semibold text-[24px] leading-[30px] w-full md:w-fit shadow-md hover:bg-pink-700 transition-colors block text-center">
               LinkedIn
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -246,17 +246,18 @@ export default function App() {
         
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 mt-16 lg:mt-32 items-start w-full">
           <div className="hidden lg:block w-full lg:flex-1" />
-          <div className="w-full lg:flex-1 flex flex-col xl:flex-row gap-8 items-start xl:items-end justify-between">
-            <div className="flex flex-col gap-4 w-full xl:w-auto">
-              <p className="text-[20px] md:text-[26.6px] font-serif leading-[33.18px] text-white/80">What were listening to</p>
-              <h3 className="text-[32px] md:text-[46.3px] font-medium leading-[1.2] mb-4">
-                Future Feelings with Radha<br/>Mistry + Julian Bleeker
-              </h3>
-              <button className="border border-white text-white px-5 py-[14.8px] rounded-[17262px] font-medium text-[23.1px] leading-[20.56px] w-fit hover:bg-white hover:text-black transition-colors">
-                Listen Now
-              </button>
-            </div>
-            <div className="w-[160px] h-[160px] md:w-[240px] md:h-[240px] bg-[#fbe00d] rounded-[32px] shrink-0 mt-8 xl:mt-0" />
+          <div className="w-full lg:flex-1 flex flex-col gap-6">
+            <p className="text-[20px] md:text-[26.6px] font-serif leading-[33.18px] text-white/80">What we're listening to</p>
+            <iframe 
+              style={{ borderRadius: '12px' }} 
+              src="https://open.spotify.com/embed/playlist/4rhGwmnxYNpadseFcH59Ri?utm_source=generator&theme=0" 
+              width="100%" 
+              height="352" 
+              frameBorder="0" 
+              allowFullScreen 
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+              loading="lazy"
+            ></iframe>
           </div>
         </div>
       </section>
@@ -284,9 +285,9 @@ export default function App() {
           <div className="flex flex-col md:flex-row gap-12 md:gap-[26px] items-start lg:items-center w-full text-[16.8px] text-[rgba(254,253,253,0.54)] font-medium tracking-[0.02px]">
             <div className="w-full md:flex-1 flex flex-wrap gap-[24px] text-[23.4px] text-white tracking-[0.12px]">
               <a href="mailto:thewndrground@gmail.com" className="hover:opacity-80 transition-opacity">thewndrground@gmail.com</a>
-              <a href="#" className="hover:opacity-80 transition-opacity">Instagram</a>
-              <a href="#" className="hover:opacity-80 transition-opacity">Twitter</a>
-              <a href="#" className="hover:opacity-80 transition-opacity">Slack</a>
+              <a href="https://instagram.com/wndr_ground" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">Instagram</a>
+              <a href="https://x.com/wndr_ground" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">Twitter</a>
+              <a href="https://join.slack.com/t/wndrground/shared_invite/zt-3wgf2r3w7-2uT26siAAnPu0F79ncPa9w" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">Slack</a>
             </div>
             
             <div className="w-full md:flex-1 flex flex-col xl:flex-row xl:items-center xl:justify-between gap-4">
